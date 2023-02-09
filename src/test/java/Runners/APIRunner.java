@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features/",
-        glue = "steps",
+        glue = "APISteps",
 
         //when you set dryRun to TRUE ,it stops actual execution
         //dryRun=true,
@@ -16,11 +16,11 @@ import org.junit.runner.RunWith;
         dryRun = false,
 
         //tags are for running specific test casenow
-        tags = "@blablabla",
+        tags = "@apidynamic",
 
-       //to remove irrelavant information from console, you need to set monochrome to true
+        //to remove irrelavant information from console, you need to set monochrome to true
         monochrome = true,
-       //pretty plugin prints the steps in the console to increase readability
+        //pretty plugin prints the steps in the console to increase readability
         //to generate the reports we plugin of runner class
         //when we generate any report this should be under target foldr
         plugin = {"pretty","html:target/cucumber.html","json:target/cucumber.json",
@@ -28,5 +28,7 @@ import org.junit.runner.RunWith;
 
 
 )
-public class SmokeRunner {
+
+public class APIRunner {
+
 }
